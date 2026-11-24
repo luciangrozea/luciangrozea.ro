@@ -32,3 +32,23 @@ python -m http.server 8000
 ```
 
 apoi intră pe http://localhost:8000.
+
+## Configurare domeniu (DNS la ROMARG)
+
+Domeniul `luciangrozea.ro` folosește nameserverele ROMARG (`ns1–ns4.romarg.com`).
+În panoul ROMARG → domeniul → **Administrare DNS / Zonă DNS**, se adaugă:
+
+| Tip   | Nume (host) | Valoare                  |
+|-------|-------------|--------------------------|
+| A     | @           | 185.199.108.153          |
+| A     | @           | 185.199.109.153          |
+| A     | @           | 185.199.110.153          |
+| A     | @           | 185.199.111.153          |
+| AAAA  | @           | 2606:50c0:8000::153      |
+| AAAA  | @           | 2606:50c0:8001::153      |
+| AAAA  | @           | 2606:50c0:8002::153      |
+| AAAA  | @           | 2606:50c0:8003::153      |
+| CNAME | www         | luciangrozea.github.io.  |
+
+După propagare (de la câteva minute la câteva ore): repo → **Settings → Pages** →
+bifează **Enforce HTTPS** (după ce GitHub emite certificatul).
