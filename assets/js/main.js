@@ -28,7 +28,9 @@
     const tags = (p.tags || []).map(t => `<li>${esc(t)}</li>`).join("");
     const linksHtml = [
       p.github ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">→ cod sursă</a>` : "",
-      p.demo ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">→ demo</a>` : ""
+      p.demo ? (/^https?:/.test(p.demo)
+        ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">${esc(p.demoLabel || "→ demo")}</a>`
+        : `<a href="${esc(p.demo)}">${esc(p.demoLabel || "→ deschide")}</a>`) : ""
     ].join("");
     return `
       <article class="card reveal">

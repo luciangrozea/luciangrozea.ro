@@ -17,6 +17,15 @@
  */
 const PROJECTS = [
   {
+    title: "Dicționar AI",
+    icon: "📖",
+    status: "Publicat",
+    desc: "Cei mai importanți 25 de termeni din AI, explicați pe înțelesul tuturor, cu analogii din viața de zi cu zi, exemple și ilustrații.",
+    tags: ["AI", "Educație", "HTML", "CSS"],
+    demo: "dictionar-ai/",
+    demoLabel: "→ citește dicționarul"
+  },
+  {
     title: "Site-ul personal",
     icon: "🌐",
     status: "Finalizat",

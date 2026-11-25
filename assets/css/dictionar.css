@@ -1,0 +1,132 @@
+/* ===== Dicționar AI ===== */
+.nav__links a.active { color: var(--accent); }
+
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; pointer-events: none; }
+.progress span { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+
+/* Hero */
+.dict-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+.dict-hero::after {
+  content: ""; position: absolute; width: 480px; height: 480px; right: -160px; top: -120px;
+  background: radial-gradient(circle, rgba(255, 122, 26, .25), transparent 65%);
+  filter: blur(20px); pointer-events: none;
+}
+.dict-hero__content { position: relative; z-index: 1; padding-top: 72px; padding-bottom: 64px; }
+.dict-hero__title { font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 1.05; margin: 0 0 18px; letter-spacing: -0.02em; }
+.dict-hero__subtitle { max-width: 640px; font-size: clamp(1.05rem, 2.2vw, 1.2rem); color: var(--muted); margin: 0 0 24px; }
+.dict-hero__meta { list-style: none; padding: 0; margin: 0 0 32px; display: flex; flex-wrap: wrap; gap: 8px; font-size: .8rem; }
+.dict-hero__meta li { padding: 4px 12px; border-radius: 999px; border: 1px solid var(--border); color: #cfcfcf; background: rgba(23, 23, 23, .8); }
+.dict-hero__meta li:first-child { border-color: var(--accent); color: var(--accent); }
+
+.search {
+  display: flex; align-items: center; gap: 10px; max-width: 520px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0 16px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.search svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
+.search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--text); font: inherit; padding: 14px 0; }
+.search input::placeholder { color: #6b6b6b; }
+
+/* Layout */
+.dict-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-top: 48px; padding-bottom: 48px; }
+@media (max-width: 1080px) { .dict-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+
+/* Cuprins */
+.toc { position: relative; }
+.toc__details { position: sticky; top: 88px; max-height: calc(100vh - 110px); overflow: auto; scrollbar-width: thin; }
+.toc__details summary {
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+  font-weight: 600; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+}
+.toc__details summary::-webkit-details-marker { display: none; }
+.toc__details summary .muted { font-size: .75rem; font-weight: 400; }
+.toc__list { list-style: none; padding: 8px 0 0; margin: 0; }
+.toc__part { margin: 14px 0 0; }
+.toc__part-name { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 6px 4px; font-weight: 600; }
+.toc__part ol { list-style: none; padding: 0; margin: 0; }
+.toc__part a {
+  display: flex; gap: 10px; padding: 5px 10px; border-radius: 6px; font-size: .88rem; color: var(--muted);
+  border-left: 2px solid transparent; transition: color .15s, background .15s, border-color .15s;
+}
+.toc__part a .mono { font-size: .75rem; color: #5a5a5a; padding-top: 2px; }
+.toc__part a:hover { color: var(--text); background: var(--surface); }
+.toc__part a.current { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); }
+.toc__part a.current .mono { color: var(--accent); }
+.toc__part li.hidden { display: none; }
+@media (min-width: 1081px) {
+  .toc__details summary { pointer-events: none; }
+}
+@media (max-width: 1080px) {
+  .toc__details { position: static; max-height: none; }
+  .toc__details[open] .toc__list { columns: 2; column-gap: 24px; padding: 4px 8px 8px; }
+  .toc__part { break-inside: avoid; }
+}
+@media (max-width: 560px) { .toc__details[open] .toc__list { columns: 1; } }
+
+/* Părți */
+.part { margin-bottom: 72px; }
+.part__head { margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.part__label { color: var(--accent); font-size: .85rem; letter-spacing: .06em; }
+.part__title { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 6px 0 8px; }
+.part__desc { color: var(--muted); margin: 0; }
+.part.hidden { display: none; }
+
+/* Termen */
+.term {
+  display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 13fr); gap: 32px; align-items: start;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 28px; margin-bottom: 28px; scroll-margin-top: 16px;
+  transition: border-color .2s;
+}
+.term:hover, .term:target { border-color: rgba(255, 122, 26, .55); }
+.term.hidden { display: none; }
+@media (max-width: 760px) { .term { grid-template-columns: 1fr; padding: 18px; gap: 20px; } }
+
+.term__figure { margin: 0; position: sticky; top: 92px; }
+@media (max-width: 760px) { .term__figure { position: static; } }
+.term__figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); background: #141414; }
+
+.term__head { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
+.term__num {
+  flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px;
+  background: var(--accent); color: #0a0a0a; font-weight: 600; font-size: 1.05rem;
+}
+.term__title { font-size: clamp(1.35rem, 3vw, 1.7rem); margin: 0; line-height: 1.2; }
+.term__en { margin: 4px 0 0; color: var(--muted); font-size: .8rem; }
+
+.term__def { margin: 0 0 18px; font-size: 1.05rem; color: var(--text); }
+.term__tag {
+  display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 6px; vertical-align: 2px;
+  font-family: var(--mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em;
+  background: var(--accent-soft); color: var(--accent);
+}
+.term__box { border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+.term__box h4 { margin: 0 0 6px; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; font-family: var(--mono); }
+.term__box p { margin: 0; color: #d4d4d4; }
+.term__box--analogy { background: linear-gradient(135deg, rgba(255, 122, 26, .14), rgba(255, 122, 26, .04)); border: 1px solid rgba(255, 122, 26, .3); }
+.term__box--analogy h4 { color: var(--accent); }
+.term__box--analogy h4::before { content: "💡 "; }
+.term__box--example { background: #121212; border: 1px solid var(--border); }
+.term__box--example h4 { color: #cfcfcf; }
+.term__box--example h4::before { content: "🔎 "; }
+.term__see { margin: 16px 0 0; font-size: .88rem; color: var(--muted); }
+.term__see a { color: var(--accent); border-bottom: 1px dashed rgba(255, 122, 26, .5); }
+.term__see a:hover { border-bottom-style: solid; }
+
+.no-results { padding: 32px; text-align: center; color: var(--muted); border: 1px dashed var(--border); border-radius: 12px; }
+
+/* Final */
+.dict-end { text-align: center; padding: 56px 24px; border: 1px solid var(--border); border-radius: 16px; background: radial-gradient(ellipse at top, rgba(255, 122, 26, .12), transparent 70%), var(--surface); }
+.dict-end h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 8px 0 12px; }
+.dict-end > p:not(.mono) { max-width: 560px; margin: 0 auto 28px; color: var(--muted); }
+.dict-end__cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.searching .dict-end { display: none; }
+
+.to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 40; width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent); color: #0a0a0a; font-weight: 700; font-size: 1.2rem;
+  box-shadow: 0 8px 24px rgba(255, 95, 0, .3); opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
