@@ -9,27 +9,34 @@
   <meta property="og:description" content="Proiecte personale în inteligență artificială, machine learning și automatizare.">
   <meta property="og:url" content="https://luciangrozea.ro/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
   <link rel="canonical" href="https://luciangrozea.ro/">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="ro" href="https://luciangrozea.ro/">
+  <link rel="alternate" hreflang="en" href="https://luciangrozea.ro/en/">
+  <link rel="alternate" hreflang="x-default" href="https://luciangrozea.ro/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
       <a href="#top" class="logo"><span class="logo__bracket">&lt;</span>LG<span class="logo__bracket">/&gt;</span></a>
-      <button class="nav__toggle" aria-label="Deschide meniul" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav__links">
-        <a href="#despre">Despre</a>
-        <a href="#proiecte">Proiecte</a>
-        <a href="#competente">Competențe</a>
-        <a href="dictionar-ai/">Dicționar AI</a>
-        <a href="#contact" class="btn btn--small">Contact</a>
-      </nav>
+      <div class="nav__right">
+        <nav class="nav__links">
+          <a href="#despre">Despre</a>
+          <a href="#proiecte">Proiecte</a>
+          <a href="#competente">Competențe</a>
+          <a href="/dictionar-ai/">Dicționar AI</a>
+          <a href="#contact" class="btn btn--small">Contact</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Limba"><a href="/" hreflang="ro" lang="ro" data-lang="ro" class="active" aria-current="true">RO</a><a href="/en/" hreflang="en" lang="en" data-lang="en">EN</a></div>
+        <button class="nav__toggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -91,7 +98,7 @@ lucian.grozea
       <div class="container">
         <h2 class="section__title"><span class="mono accent">02.</span> Proiecte</h2>
         <div class="filters" id="filters"></div>
-        <div class="projects" id="projects"></div>
+        <div class="projects" id="projects-grid"></div>
       </div>
     </section>
 
@@ -141,7 +148,8 @@ lucian.grozea
     </div>
   </footer>
 
-  <script src="assets/js/projects.js?v=2"></script>
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="/assets/js/lang.js?v=1"></script>
+  <script src="/assets/js/projects.js?v=3"></script>
+  <script src="/assets/js/main.js?v=3"></script>
 </body>
 </html>

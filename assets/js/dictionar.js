@@ -1,6 +1,17 @@
 (function () {
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Deschis direct la un termen (#...): sare instant, fără scroll animat lung
+  if (location.hash) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) {
+      const root = document.documentElement;
+      root.style.scrollBehavior = "auto";
+      target.scrollIntoView();
+      requestAnimationFrame(() => { root.style.scrollBehavior = ""; });
+    }
+  }
+
   // Meniu mobil
   const toggle = document.querySelector(".nav__toggle");
   const links = document.querySelector(".nav__links");

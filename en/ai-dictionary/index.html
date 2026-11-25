@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Dictionary: 25 terms explained simply | Lucian Grozea</title>
+  <meta name="description" content="The 25 most important terms in artificial intelligence, explained for everyone: definitions, everyday analogies, examples and illustrations.">
+  <meta property="og:title" content="AI Dictionary: 25 terms explained simply">
+  <meta property="og:description" content="From “artificial intelligence” to “AI agent”: definitions, analogies and examples anyone can follow.">
+  <meta property="og:url" content="https://luciangrozea.ro/en/ai-dictionary/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <link rel="canonical" href="https://luciangrozea.ro/en/ai-dictionary/">
+  <link rel="alternate" hreflang="ro" href="https://luciangrozea.ro/dictionar-ai/">
+  <link rel="alternate" hreflang="en" href="https://luciangrozea.ro/en/ai-dictionary/">
+  <link rel="alternate" hreflang="x-default" href="https://luciangrozea.ro/dictionar-ai/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+  <link rel="stylesheet" href="/assets/css/dictionar.css?v=2">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/en/" class="logo"><span class="logo__bracket">&lt;</span>LG<span class="logo__bracket">/&gt;</span></a>
+      <div class="nav__right">
+        <nav class="nav__links">
+          <a href="/en/#about">About</a><a href="/en/#projects">Projects</a>
+          <a href="/en/ai-dictionary/" class="active">AI Dictionary</a>
+          <a href="/en/#contact" class="btn btn--small">Contact</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language"><a href="/dictionar-ai/" hreflang="ro" lang="ro" data-lang="ro">RO</a><a href="/en/ai-dictionary/" hreflang="en" lang="en" data-lang="en" class="active" aria-current="true">EN</a></div>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="dict-hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container dict-hero__content">
+        <p class="eyebrow mono">// a guide for everyone</p>
+        <h1 class="dict-hero__title">AI <span class="accent">Dictionary</span></h1>
+        <p class="dict-hero__subtitle">The 25 most important terms in artificial intelligence, explained in plain language: a definition, an everyday comparison and a concrete example for each one.</p>
+        <ul class="dict-hero__meta mono">
+          <li>25 terms</li><li>5 chapters</li><li>~20 min read</li><li>no technical knowledge needed</li>
+        </ul>
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="search" placeholder="Search a term… (e.g. prompt, token)" autocomplete="off">
+        </label>
+      </div>
+    </section>
+
+    <div class="container dict-layout">
+      <aside class="toc">
+        <details class="toc__details" id="toc">
+          <summary>Contents <span class="mono muted">25 terms</span></summary>
+          <ol class="toc__list">
+            <li class="toc__part"><span class="toc__part-name">I. Foundations</span><ol><li><a href="#artificial-intelligence"><span class="mono">01</span> Artificial intelligence</a></li><li><a href="#algorithm"><span class="mono">02</span> Algorithm</a></li><li><a href="#machine-learning"><span class="mono">03</span> Machine learning</a></li><li><a href="#training-data"><span class="mono">04</span> Training data</a></li><li><a href="#model"><span class="mono">05</span> Model</a></li><li><a href="#neural-network"><span class="mono">06</span> Neural network</a></li><li><a href="#deep-learning"><span class="mono">07</span> Deep learning</a></li><li><a href="#parameters"><span class="mono">08</span> Parameters</a></li></ol></li><li class="toc__part"><span class="toc__part-name">II. Language models</span><ol><li><a href="#generative-ai"><span class="mono">09</span> Generative AI</a></li><li><a href="#llm"><span class="mono">10</span> LLM</a></li><li><a href="#transformer"><span class="mono">11</span> Transformer and attention</a></li><li><a href="#token"><span class="mono">12</span> Token</a></li><li><a href="#context-window"><span class="mono">13</span> Context window</a></li><li><a href="#inference"><span class="mono">14</span> Inference</a></li></ol></li><li class="toc__part"><span class="toc__part-name">III. Talking to AI</span><ol><li><a href="#prompt"><span class="mono">15</span> Prompt</a></li><li><a href="#prompt-engineering"><span class="mono">16</span> Prompt engineering</a></li><li><a href="#temperature"><span class="mono">17</span> Temperature</a></li><li><a href="#hallucination"><span class="mono">18</span> Hallucination</a></li><li><a href="#multimodal"><span class="mono">19</span> Multimodal</a></li></ol></li><li class="toc__part"><span class="toc__part-name">IV. AI in practice</span><ol><li><a href="#fine-tuning"><span class="mono">20</span> Fine-tuning</a></li><li><a href="#embeddings"><span class="mono">21</span> Embeddings</a></li><li><a href="#rag"><span class="mono">22</span> RAG</a></li><li><a href="#ai-agent"><span class="mono">23</span> AI agent</a></li></ol></li><li class="toc__part"><span class="toc__part-name">V. Responsible AI</span><ol><li><a href="#bias"><span class="mono">24</span> Bias</a></li><li><a href="#alignment"><span class="mono">25</span> Alignment</a></li></ol></li>
+          </ol>
+        </details>
+      </aside>
+
+      <div class="terms" id="terms">
+        <p class="no-results" id="no-results" hidden>No matching terms. Try another word.</p>
+        <section class="part" id="part-1"><header class="part__head"><span class="part__label mono">Part I</span><h2 class="part__title">Foundations</h2><p class="part__desc">What artificial intelligence actually is, and how a machine manages to learn.</p></header><article class="term" id="artificial-intelligence" data-alt="inteligenta-artificiala" data-search="artificial intelligence ai the field that builds computer programs able to do things that normally require human intelligence: understanding language, recognizing images, making decisions or solving problems.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/01-artificial-intelligence.svg" alt="A human and a robot, connected by three abilities: seeing, communicating and solving problems." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">01</span><div><h3 class="term__title">Artificial intelligence</h3><p class="term__en mono">AI</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The field that builds computer programs able to do things that normally require human intelligence: understanding language, recognizing images, making decisions or solving problems.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Think of AI as an extremely fast apprentice. It doesn't “think” like a person and it isn't conscious, but it has been trained to imitate certain human abilities: seeing, listening, reading, answering. Sometimes it is astonishingly good; other times it makes mistakes a child wouldn't.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>When your phone recognizes your face to unlock, when a streaming platform recommends what to watch tonight, or when you chat with an assistant like ChatGPT or Claude, there is an AI system working behind the scenes.</p></div>
+    <p class="term__see">See also: <a href="#machine-learning">Machine learning</a>, <a href="#generative-ai">Generative AI</a></p>
+  </div>
+</article><article class="term" id="algorithm" data-alt="algoritm" data-search="algorithm  a list of clear steps, in a specific order, that a computer follows to solve a problem.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/02-algorithm.svg" alt="A recipe with four numbered steps and, next to it, the cake you get by following them." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">02</span><div><h3 class="term__title">Algorithm</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A list of clear steps, in a specific order, that a computer follows to solve a problem.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>An algorithm is like a cake recipe: “Beat 3 eggs. Add 200 g of sugar. Mix for 2 minutes. Bake for 30 minutes at 180°C.” Follow the steps exactly and you get the same result every time. Computers are excellent at following recipes: they never get bored and never skip a step.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Your navigation app uses an algorithm to find the fastest route: it compares the possible routes step by step and picks the best one. The difference from AI: here every rule was written by a programmer. In AI, many of the rules are discovered by the computer itself.</p></div>
+    <p class="term__see">See also: <a href="#machine-learning">Machine learning</a></p>
+  </div>
+</article><article class="term" id="machine-learning" data-alt="machine-learning" data-search="machine learning ml a branch of ai in which the computer isn&#x27;t given rules written by people; instead, it learns rules and patterns on its own by studying lots of examples.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/03-machine-learning.svg" alt="Nine cat pictures go into a system that learns patterns, which then recognizes a new cat." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">03</span><div><h3 class="term__title">Machine learning</h3><p class="term__en mono">ML</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A branch of AI in which the computer isn't given rules written by people; instead, it learns rules and patterns on its own by studying lots of examples.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>How do you explain to a child what a cat is? You don't give them a definition (“a mammal with whiskers and pointy ears…”). You show them lots of cats and, at some point, they recognize one they've never seen before. Machine learning works the same way: you give the computer thousands of examples and it figures out on its own what they have in common.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Your email's spam filter has “seen” millions of messages labelled as spam or not spam. From them it learned by itself what a suspicious message looks like, without anyone writing every single rule.</p></div>
+    <p class="term__see">See also: <a href="#training-data">Training data</a>, <a href="#model">Model</a>, <a href="#neural-network">Neural network</a></p>
+  </div>
+</article><article class="term" id="training-data" data-alt="date-de-antrenare" data-search="training data  the collection of examples (texts, images, sounds, numbers) that an ai system learns from.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/04-training-data.svg" alt="A pile of books, documents, images and sounds that a robot reads and learns from." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">04</span><div><h3 class="term__title">Training data</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The collection of examples (texts, images, sounds, numbers) that an AI system learns from.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Training data is the AI's set of textbooks and workbooks. A student who learned from good, varied textbooks will know more than one who only had a few torn pages. Likewise, an AI is only as good as the data it learned from. If the textbooks contain mistakes, it will learn those too.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>To recognize skin conditions in photos, a medical AI is trained on tens of thousands of images checked by dermatologists, each labelled with the correct diagnosis.</p></div>
+    <p class="term__see">See also: <a href="#model">Model</a>, <a href="#bias">Bias</a></p>
+  </div>
+</article><article class="term" id="model" data-alt="model" data-search="model ai model the result of the learning process: a program that has “absorbed” the patterns in the training data and can apply them to new situations.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/05-model.svg" alt="A graduate robot wearing a cap, receiving a new question and giving an answer." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">05</span><div><h3 class="term__title">Model</h3><p class="term__en mono">AI model</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The result of the learning process: a program that has “absorbed” the patterns in the training data and can apply them to new situations.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>If training data is the textbooks, the model is the student who has graduated. They no longer carry the textbooks, but they kept what they learned and can answer new questions. When you hear about GPT, Claude or Gemini, think of different “graduates” trained at different schools.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>An app that tells you which plant you photographed uses a model: you give it a new photo and it replies “This is lavender”, based on what it learned from millions of other photos.</p></div>
+    <p class="term__see">See also: <a href="#parameters">Parameters</a>, <a href="#inference">Inference</a>, <a href="#llm">LLM</a></p>
+  </div>
+</article><article class="term" id="neural-network" data-alt="retea-neuronala" data-search="neural network  a type of model loosely inspired by the human brain, made of many artificial “neurons” connected to each other and organized in layers that pass information along.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/06-neural-network.svg" alt="Four layers of connected neurons, with a highlighted path from the input to the answer “dog”." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">06</span><div><h3 class="term__title">Neural network</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A type of model loosely inspired by the human brain, made of many artificial “neurons” connected to each other and organized in layers that pass information along.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Picture a team of workers in a factory, seated in rows. Each one receives a few notes from colleagues in the row behind, makes a tiny decision (“this looks important” or “this doesn't”) and passes it on. None of them understands the whole problem, but together, row after row, they reach the right answer.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>When you show it a photo, the first layer of “neurons” only sees patches of light and shadow, the middle layers combine those patches into shapes, and the last layer decides: “It's a dog.”</p></div>
+    <p class="term__see">See also: <a href="#deep-learning">Deep learning</a>, <a href="#parameters">Parameters</a></p>
+  </div>
+</article><article class="term" id="deep-learning" data-alt="deep-learning" data-search="deep learning  machine learning that uses neural networks with many layers (“deep” networks). it is the technology behind almost every spectacular breakthrough in ai in recent years.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/07-deep-learning.svg" alt="A four-floor building: lines on the ground floor, then shapes, facial features and, on the top floor, a whole face." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">07</span><div><h3 class="term__title">Deep learning</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>Machine learning that uses neural networks with many layers (“deep” networks). It is the technology behind almost every spectacular breakthrough in AI in recent years.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Think of a building with many floors. On the ground floor you only see lines. On the second floor, lines become shapes: circles, corners. On the third, shapes become eyes, a nose, a mouth. On the top floor it all comes together: “This is a face.” The more floors the building has, the more complex the things it can understand.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>High-quality machine translation, voice recognition on your phone, self-driving cars and modern chatbots all use deep learning.</p></div>
+    <p class="term__see">See also: <a href="#neural-network">Neural network</a>, <a href="#transformer">Transformer and attention</a></p>
+  </div>
+</article><article class="term" id="parameters" data-alt="parametri" data-search="parameters  the adjustable numbers inside a model that change during training. everything the model has learned is, in fact, “stored” in them.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/08-parameters.svg" alt="A mixing desk with many rotary knobs and sliders, each set differently." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">08</span><div><h3 class="term__title">Parameters</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The adjustable numbers inside a model that change during training. Everything the model has learned is, in fact, “stored” in them.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Imagine a mixing desk like the ones at concerts, but with billions of knobs instead of a few dozen. During training, every knob is turned a little at a time until the sound (the model's answers) comes out as well as possible. The final position of all the knobs is what the model “knows”.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>When you read that a model has “70 billion parameters”, it means it has 70 billion such knobs. In general, more parameters means a model capable of more complex things, but also more expensive to run.</p></div>
+    <p class="term__see">See also: <a href="#model">Model</a>, <a href="#fine-tuning">Fine-tuning</a></p>
+  </div>
+</article></section><section class="part" id="part-2"><header class="part__head"><span class="part__label mono">Part II</span><h2 class="part__title">Language models</h2><p class="part__desc">How ChatGPT, Claude, Gemini and the other assistants work under the hood.</p></header><article class="term" id="generative-ai" data-alt="ai-generativ" data-search="generative ai  the kind of ai that creates new content (text, images, music, video or code) instead of only analyzing or classifying existing content.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/09-generative-ai.svg" alt="A robot in the middle creating four new things: a text, an image, a melody and code." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">09</span><div><h3 class="term__title">Generative AI</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The kind of AI that creates new content (text, images, music, video or code) instead of only analyzing or classifying existing content.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>A “classic” AI is like an art critic: it looks at a painting and tells you its style. A generative AI is like a painter: it has studied thousands of paintings and can paint a new one that never existed, in the style you ask for.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>You type “an orange cat reading the newspaper in a Paris café, watercolor style” and get a brand-new image in a few seconds. Or you ask a chatbot to write a congratulations message for a colleague.</p></div>
+    <p class="term__see">See also: <a href="#llm">LLM</a>, <a href="#multimodal">Multimodal</a></p>
+  </div>
+</article><article class="term" id="llm" data-alt="llm" data-search="llm large language model a huge ai model trained on enormous amounts of text, which has learned to understand and generate natural language. it is the “engine” behind chatbots like chatgpt, claude or gemini.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/10-llm.svg" alt="A huge library feeding a robot, which completes “The capital of France is…” with “Paris”." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">10</span><div><h3 class="term__title">LLM</h3><p class="term__en mono">Large Language Model</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A huge AI model trained on enormous amounts of text, which has learned to understand and generate natural language. It is the “engine” behind chatbots like ChatGPT, Claude or Gemini.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Imagine someone who has read almost everything ever written on the internet: books, articles, forums, recipes, code. They don't remember every page, but they've become extraordinarily good at one thing: cleverly guessing the next suitable word. Repeated hundreds of times, this “game” produces answers, essays and entire conversations.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>If you type “The capital of France is…”, an LLM knows the most likely next word is “Paris”. The very same mechanism, at a huge scale, lets it explain photosynthesis or polish your CV.</p></div>
+    <p class="term__see">See also: <a href="#token">Token</a>, <a href="#transformer">Transformer and attention</a>, <a href="#prompt">Prompt</a></p>
+  </div>
+</article><article class="term" id="transformer" data-alt="transformer" data-search="transformer and attention  the architecture (the way a model is built) used by almost all modern llms. its key idea is called “attention”: the model looks at all the words in a text at once and decides which ones matter for understanding each of the others.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/11-transformer.svg" alt="The words of a sentence, with an orange line connecting “she” to “Anna”." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">11</span><div><h3 class="term__title">Transformer and attention</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The architecture (the way a model is built) used by almost all modern LLMs. Its key idea is called “attention”: the model looks at all the words in a text at once and decides which ones matter for understanding each of the others.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>When you read “Mike gave Anna the book because she asked for it”, you instantly know that “she” means Anna, not Mike. Your mind has “drawn a line” between those two words. The attention mechanism does exactly that: it draws thousands of invisible lines, like a highlighter connecting the words that matter to each other.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>The “T” in “ChatGPT” stands for Transformer. The architecture was introduced by Google researchers in 2017, in a paper with a now-famous title: “Attention Is All You Need”.</p></div>
+    <p class="term__see">See also: <a href="#llm">LLM</a>, <a href="#token">Token</a></p>
+  </div>
+</article><article class="term" id="token" data-alt="token" data-search="token  the small chunk of text an llm works with. a token can be a whole word, part of a word or a punctuation mark.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/12-token.svg" alt="The sentence “Hello, my friend!” split into five colored Lego bricks." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">12</span><div><h3 class="term__title">Token</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The small chunk of text an LLM works with. A token can be a whole word, part of a word or a punctuation mark.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>The model doesn't read letters or whole words, but “Lego bricks” of text. Short, common words are a single brick, while long or rare ones are built from several. Everything the AI reads and writes is really just a chain of such bricks.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>The sentence “Hello, my friend!” might be split roughly like this: [Hello] [,] [ my] [ friend] [!]. It matters because AI services are billed by the number of tokens, and the “memory” of a conversation (see Context window) is measured in tokens too. In English, 100 tokens are roughly 75 words; languages such as Romanian usually need a few more.</p></div>
+    <p class="term__see">See also: <a href="#context-window">Context window</a>, <a href="#llm">LLM</a></p>
+  </div>
+</article><article class="term" id="context-window" data-alt="context-window" data-search="context window  the maximum amount of text (measured in tokens) an ai model can “see” and take into account at once: the whole conversation so far, any attached documents, and the answer it is currently writing.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/13-context-window.svg" alt="A robot at a desk covered in documents; the oldest ones are falling off the edge." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">13</span><div><h3 class="term__title">Context window</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The maximum amount of text (measured in tokens) an AI model can “see” and take into account at once: the whole conversation so far, any attached documents, and the answer it is currently writing.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Imagine the AI works at a desk. On the desk it keeps every document from your conversation: what you wrote, what it replied, the files you gave it. As long as everything fits on the desk, it can consult anything. But the desk has a fixed size. When it gets too full, the oldest documents start falling off the edge, which is why, in very long conversations, the AI sometimes seems to “forget” what you discussed at the beginning.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Modern models have very large desks: some can hold hundreds of thousands of tokens, the equivalent of several novels. Still, if you work for hours in the same conversation, it's a good idea to start a fresh one now and then, beginning with a short summary of what matters.</p></div>
+    <p class="term__see">See also: <a href="#token">Token</a>, <a href="#rag">RAG</a></p>
+  </div>
+</article><article class="term" id="inference" data-alt="inferenta" data-search="inference  the moment an already-trained model is actually used: it receives a new question and produces an answer.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/14-inference.svg" alt="Left: a dumbbell and a calendar (training takes months). Right: question, robot, answer and a stopwatch (inference takes seconds)." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">14</span><div><h3 class="term__title">Inference</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The moment an already-trained model is actually used: it receives a new question and produces an answer.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Training is like a football team's months of pre-season camp: it takes long, costs a lot and happens rarely. Inference is the match itself, where the team uses what it practised. Every question you ask a chatbot is a small “match”.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Training a top LLM can take months and cost tens or even hundreds of millions of dollars. Inference, the answer to your question, takes a few seconds and usually costs a fraction of a cent.</p></div>
+    <p class="term__see">See also: <a href="#model">Model</a>, <a href="#temperature">Temperature</a></p>
+  </div>
+</article></section><section class="part" id="part-3"><header class="part__head"><span class="part__label mono">Part III</span><h2 class="part__title">Talking to AI</h2><p class="part__desc">What you tell it, how you tell it, and what to watch out for in the answer.</p></header><article class="term" id="prompt" data-alt="prompt" data-search="prompt  the instruction, question or text you give an ai model in order to get a response.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/15-prompt.svg" alt="A note reading “Write me a short poem about the sea”, handed to a robot chef who returns the poem." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">15</span><div><h3 class="term__title">Prompt</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The instruction, question or text you give an AI model in order to get a response.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>A prompt is like an order at a restaurant. The chef (the AI) can cook almost anything, but will cook what's written on the ticket. “Something to eat” will bring you a surprise; “a vegetable soup, no onions, not too hot” brings you exactly what you wanted.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>“Write me a short poem about the sea” is a prompt. So are “Summarize this document in 5 points” or a photo accompanied by the question “What plant is this?”.</p></div>
+    <p class="term__see">See also: <a href="#prompt-engineering">Prompt engineering</a>, <a href="#context-window">Context window</a></p>
+  </div>
+</article><article class="term" id="prompt-engineering" data-alt="prompt-engineering" data-search="prompt engineering  the art of writing clear, well-structured prompts so the ai gives the most useful and precise answers possible.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/16-prompt-engineering.svg" alt="Top: a vague request produces a shapeless cake. Bottom: a detailed request produces exactly the cake you wanted." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">16</span><div><h3 class="term__title">Prompt engineering</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The art of writing clear, well-structured prompts so the AI gives the most useful and precise answers possible.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Think of the difference between telling a new colleague “Make me a presentation” and “Make me a 10-slide presentation for clients about our Q3 results, in an upbeat tone, with a chart on slide 4”. The second one has every chance of bringing you exactly what you wanted. It's the same with AI: context, goal, format and examples make all the difference.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Instead of “Write me a CV”, a good prompt would be: “You are an experienced IT recruiter. Based on the information below, write a one-page CV for a Junior AI Engineer role. Emphasize the personal projects and use a professional tone.”</p></div>
+    <p class="term__see">See also: <a href="#prompt">Prompt</a>, <a href="#hallucination">Hallucination</a></p>
+  </div>
+</article><article class="term" id="temperature" data-alt="temperatura" data-search="temperature  a setting that controls how predictable or, on the contrary, how creative and surprising a model&#x27;s answers are.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/17-temperature.svg" alt="A horizontal thermometer from “predictable” to “creative”, with a sample answer at each end." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">17</span><div><h3 class="term__title">Temperature</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A setting that controls how predictable or, on the contrary, how creative and surprising a model's answers are.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Imagine a thermostat for imagination. At a low temperature, the AI always picks the safest, most likely word, like a meticulous accountant. At a high temperature, it allows itself unexpected words, like a poet improvising. Turn the thermostat up too far and it starts saying things that make no sense.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>For calculations, extracting data from an invoice or technical answers, a low temperature is used. For brainstorming, slogans or children's stories, a higher temperature brings more varied ideas.</p></div>
+    <p class="term__see">See also: <a href="#hallucination">Hallucination</a>, <a href="#inference">Inference</a></p>
+  </div>
+</article><article class="term" id="hallucination" data-alt="halucinatie" data-search="hallucination  when an ai model generates false or made-up information but presents it with full confidence, as if it were true.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/18-hallucination.svg" alt="A very confident robot recommends a made-up book, stamped “NOT REAL”." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">18</span><div><h3 class="term__title">Hallucination</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>When an AI model generates false or made-up information but presents it with full confidence, as if it were true.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>It's like a student in an oral exam who doesn't know the answer but doesn't want to stay silent. So they improvise, fluently and confidently, something that sounds plausible. The difference is that the AI isn't lying on purpose: it produces the text that sounds most likely, and sometimes the likely text simply isn't true.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>You ask for a list of books on a topic, and the AI includes a title that doesn't exist, with an invented author and publication year. That's why important information (medical, legal, financial, figures, quotes) should always be checked against reliable sources.</p></div>
+    <p class="term__see">See also: <a href="#rag">RAG</a>, <a href="#temperature">Temperature</a></p>
+  </div>
+</article><article class="term" id="multimodal" data-alt="multimodal" data-search="multimodal multimodal ai an ai model&#x27;s ability to understand and work with several kinds of information at once: text, images, sound, video.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/19-multimodal.svg" alt="A robot connected to four kinds of information: text, image, sound and video." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">19</span><div><h3 class="term__title">Multimodal</h3><p class="term__en mono">Multimodal AI</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>An AI model's ability to understand and work with several kinds of information at once: text, images, sound, video.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>The first chatbots could only “read”, like someone who communicates exclusively through written notes. A multimodal model has both “eyes” and “ears”: it can look at a photo, listen to a recording and reply in writing or by voice, all in the same conversation.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>You take a photo of what's in your fridge and ask “What can I cook with this?”. The model recognizes the ingredients in the image and suggests three recipes.</p></div>
+    <p class="term__see">See also: <a href="#generative-ai">Generative AI</a>, <a href="#llm">LLM</a></p>
+  </div>
+</article></section><section class="part" id="part-4"><header class="part__head"><span class="part__label mono">Part IV</span><h2 class="part__title">AI in practice</h2><p class="part__desc">The techniques that make AI genuinely useful at work and in everyday life.</p></header><article class="term" id="fine-tuning" data-alt="fine-tuning" data-search="fine-tuning  the process of training an already-trained model a little more, on a smaller set of specialized data, so it gets better at a particular task or field.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/20-fine-tuning.svg" alt="A generalist robot reads a cardiology book and becomes a specialist robot with a stethoscope." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">20</span><div><h3 class="term__title">Fine-tuning</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The process of training an already-trained model a little more, on a smaller set of specialized data, so it gets better at a particular task or field.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>A medical graduate already knows a lot about the human body in general. To become a cardiologist, they don't start from scratch: they specialize in the heart. Fine-tuning is the AI's specialization: it starts from a general model and gives it extra training for a specific field.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>A bank can take a general model and fine-tune it on thousands of real customer conversations, so that it answers in the bank's style and knows its products well.</p></div>
+    <p class="term__see">See also: <a href="#model">Model</a>, <a href="#rag">RAG</a></p>
+  </div>
+</article><article class="term" id="embeddings" data-alt="embeddings" data-search="embeddings vector representations a way of turning words, sentences or images into lists of numbers, so that things with similar meanings get similar numbers.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/21-embeddings.svg" alt="A map where words with similar meanings are grouped: animals, vehicles and emotions." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">21</span><div><h3 class="term__title">Embeddings</h3><p class="term__en mono">Vector representations</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A way of turning words, sentences or images into lists of numbers, so that things with similar meanings get similar numbers.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>Imagine a huge map of meanings. Every word gets coordinates on this map. “Dog” and “cat” live on the same street, “car” and “truck” are in another neighborhood, and “joy” and “happiness” are next-door neighbors. The computer doesn't understand the words, but it can measure the distance between them on the map.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>Thanks to embeddings, when you search an online store for “running footwear”, you also get results for “jogging sneakers”, even though they don't contain the exact words you typed: their meaning is close.</p></div>
+    <p class="term__see">See also: <a href="#rag">RAG</a></p>
+  </div>
+</article><article class="term" id="rag" data-alt="rag" data-search="rag retrieval-augmented generation a technique where, before answering, the ai searches a collection of documents (a knowledge base) for relevant information and builds its answer on it.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/22-rag.svg" alt="A question, a magnifying glass searching documents, a robot reading, and an answer with its source." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">22</span><div><h3 class="term__title">RAG</h3><p class="term__en mono">Retrieval-Augmented Generation</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>A technique where, before answering, the AI searches a collection of documents (a knowledge base) for relevant information and builds its answer on it.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>It's the difference between a closed-book and an open-book exam. Without RAG, the AI answers from memory alone, and the information may be wrong or outdated. With RAG, it first looks up the right page in the “book”, reads it, then answers. The result: more accurate answers, with sources you can check.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>A telecom company's support chatbot uses RAG: when you ask “How much does roaming in Turkey cost?”, it searches the official documents for the current rate and answers, pointing to the exact document it took the information from.</p></div>
+    <p class="term__see">See also: <a href="#embeddings">Embeddings</a>, <a href="#hallucination">Hallucination</a>, <a href="#ai-agent">AI agent</a></p>
+  </div>
+</article><article class="term" id="ai-agent" data-alt="agent-ai" data-search="ai agent  an ai system that doesn&#x27;t just answer questions but acts on its own to get a task done: it makes a plan, uses tools (browser, email, calendar, files), checks the result and corrects itself until it&#x27;s finished.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/23-ai-agent.svg" alt="A robot at the center of a plan, act, check cycle, surrounded by tools: browser, email, calendar, files." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">23</span><div><h3 class="term__title">AI agent</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>An AI system that doesn't just answer questions but acts on its own to get a task done: it makes a plan, uses tools (browser, email, calendar, files), checks the result and corrects itself until it's finished.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>A regular chatbot is like a consultant giving advice: “You should book a flight on Tuesday.” An agent is like a personal assistant who actually books the flight: it searches websites, compares prices, checks your calendar and sends you the confirmation. You give it the goal; it works out the steps.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>You tell an agent: “Find me three Italian restaurants nearby, open on Saturday evening, with good reviews, and put them in a table.” The agent searches the web, reads the reviews, checks opening hours and delivers the table. Even this website was built with the help of an AI agent that wrote the code, tested it and published it.</p></div>
+    <p class="term__see">See also: <a href="#prompt">Prompt</a>, <a href="#alignment">Alignment</a></p>
+  </div>
+</article></section><section class="part" id="part-5"><header class="part__head"><span class="part__label mono">Part V</span><h2 class="part__title">Responsible AI</h2><p class="part__desc">Why it matters that AI is fair, honest and safe.</p></header><article class="term" id="bias" data-alt="bias" data-search="bias  an ai system&#x27;s tendency to produce unfair or unbalanced results, usually because the data it learned from was itself unbalanced.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/24-bias.svg" alt="A tilted balance scale: many people on one pan, just one on the other." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">24</span><div><h3 class="term__title">Bias</h3></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>An AI system's tendency to produce unfair or unbalanced results, usually because the data it learned from was itself unbalanced.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>If a child grew up seeing only pictures where doctors are men and nurses are women, they might come to believe “that's just how it is”. AI learns from our data, so it also picks up the prejudices in it, like a scale that was tilted from the very start.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>An AI for screening CVs, trained on the hiring history of a company that has mostly hired men, may end up scoring women's CVs lower. To prevent this, the data and the results need to be checked carefully and rebalanced.</p></div>
+    <p class="term__see">See also: <a href="#training-data">Training data</a>, <a href="#alignment">Alignment</a></p>
+  </div>
+</article><article class="term" id="alignment" data-alt="aliniere" data-search="alignment ai alignment the effort to make ai systems pursue human goals and values: to be helpful, honest and not cause harm.">
+  <figure class="term__figure"><img src="/assets/img/dictionar/en/25-alignment.svg" alt="A compass whose needle points to a heart, the symbol of human values, watched by a robot." width="480" height="320" loading="lazy"></figure>
+  <div class="term__body">
+    <header class="term__head"><span class="term__num mono">25</span><div><h3 class="term__title">Alignment</h3><p class="term__en mono">AI alignment</p></div></header>
+    <p class="term__def"><span class="term__tag">Definition</span>The effort to make AI systems pursue human goals and values: to be helpful, honest and not cause harm.</p>
+    <div class="term__box term__box--analogy"><h4>In plain words</h4><p>A very capable AI is like a very powerful car: the power is only useful if the steering and brakes work and the car goes where you want it to. Alignment means building that steering wheel: the model must understand not only what you said, but what you actually meant, and refuse dangerous things.</p></div>
+    <div class="term__box term__box--example"><h4>Example</h4><p>If you ask an AI “Help me lose 10 kg in a week”, a well-aligned model won't hand you a dangerous diet just to fulfil the request. It will explain why the goal isn't healthy and suggest a safe alternative.</p></div>
+    <p class="term__see">See also: <a href="#bias">Bias</a>, <a href="#ai-agent">AI agent</a></p>
+  </div>
+</article></section>
+
+        <section class="dict-end">
+          <p class="mono accent">// congratulations</p>
+          <h2>You've made it through the whole dictionary!</h2>
+          <p>You now know the basic vocabulary of artificial intelligence. Next time you hear about “tokens”, “hallucinations” or “AI agents”, you'll know exactly what they mean.</p>
+          <div class="dict-end__cta">
+            <a href="#top" class="btn">Back to top</a>
+            <a href="/en/#projects" class="btn btn--ghost">See other projects</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <a href="#top" class="to-top" id="to-top" aria-label="Back to top">↑</a>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="mono">© <span id="year"></span> Lucian Grozea · AI Dictionary · hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/lang.js?v=1"></script>
+  <script src="/assets/js/dictionar.js?v=3"></script>
+</body>
+</html>

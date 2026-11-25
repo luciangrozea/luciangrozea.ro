@@ -16,10 +16,17 @@
     })
   );
 
+  // Texte în funcție de limba paginii (<html lang="ro|en">)
+  const EN = document.documentElement.lang === "en";
+  const T = EN
+    ? { code: "→ source code", demo: "→ demo", open: "→ open", soon: "New projects coming soon…", all: "All" }
+    : { code: "→ cod sursă", demo: "→ demo", open: "→ deschide", soon: "Proiecte noi în curând…", all: "Toate" };
+
   // Randare proiecte
-  const grid = document.getElementById("projects");
+  const grid = document.getElementById("projects-grid");
   const filtersEl = document.getElementById("filters");
-  const projects = typeof PROJECTS !== "undefined" ? PROJECTS : [];
+  const projects = (typeof PROJECTS !== "undefined" ? PROJECTS : [])
+    .map(p => (EN && p.en ? { ...p, ...p.en } : p));
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -27,10 +34,10 @@
   function card(p) {
     const tags = (p.tags || []).map(t => `<li>${esc(t)}</li>`).join("");
     const linksHtml = [
-      p.github ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">→ cod sursă</a>` : "",
+      p.github ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">${T.code}</a>` : "",
       p.demo ? (/^https?:/.test(p.demo)
-        ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">${esc(p.demoLabel || "→ demo")}</a>`
-        : `<a href="${esc(p.demo)}">${esc(p.demoLabel || "→ deschide")}</a>`) : ""
+        ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">${esc(p.demoLabel || T.demo)}</a>`
+        : `<a href="${esc(p.demo)}">${esc(p.demoLabel || T.open)}</a>`) : ""
     ].join("");
     return `
       <article class="card reveal">
@@ -48,7 +55,7 @@
   const placeholder = `
     <article class="card card--placeholder">
       <span class="card__icon accent">+</span>
-      <p class="muted mono" style="margin:12px 0 0">Proiecte noi în curând…</p>
+      <p class="muted mono" style="margin:12px 0 0">${T.soon}</p>
     </article>`;
 
   function render(filter) {
@@ -60,7 +67,7 @@
   // Filtre pe baza tag-urilor
   const allTags = [...new Set(projects.flatMap(p => p.tags || []))];
   if (allTags.length > 1) {
-    const btns = ["Toate", ...allTags].map((t, i) =>
+    const btns = [T.all, ...allTags].map((t, i) =>
       `<button class="filter${i === 0 ? " active" : ""}" data-tag="${i === 0 ? "" : esc(t)}">${esc(t)}</button>`
     ).join("");
     filtersEl.innerHTML = btns;
