@@ -21,6 +21,20 @@
  */
 const PROJECTS = [
   {
+    title: "Chicken Commander",
+    icon: "🐔",
+    status: "v1.3.1",
+    desc: "Manager de fișiere pentru Windows, cu două panouri, controlat din tastatură. Copiere în fundal cu progres, redenumire multiplă, vizualizator pentru fișiere de mai mulți GB, căutare și comparare de fișiere, arhive (ZIP, 7z, RAR) deschise ca foldere, client FTP/SFTP și teme luminoasă/întunecată. Gratuit, cu kit de instalare sau varianta portabilă.",
+    tags: ["C#", "WPF", ".NET", "Windows"],
+    github: "https://github.com/luciangrozea/chicken-commander",
+    demo: "https://github.com/luciangrozea/chicken-commander/releases/latest",
+    demoLabel: "→ descarcă",
+    en: {
+      desc: "A keyboard-driven, dual-pane file manager for Windows. Background copying with progress, multi-rename, a viewer for multi-GB files, file search and compare, archives (ZIP, 7z, RAR) browsed as folders, an FTP/SFTP client and light/dark themes. Free, as an installer or a portable app.",
+      demoLabel: "→ download"
+    }
+  },
+  {
     title: "Dicționar AI",
     icon: "📖",
     status: "Publicat",
