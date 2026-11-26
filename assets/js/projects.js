@@ -57,7 +57,6 @@ const PROJECTS = [
     status: "Finalizat",
     desc: "Acest portofoliu: site static bilingv, găzduit gratuit pe GitHub Pages, cu domeniu propriu luciangrozea.ro.",
     tags: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-    github: "https://github.com/luciangrozea/luciangrozea.ro",
     en: {
       title: "This website",
       status: "Done",
